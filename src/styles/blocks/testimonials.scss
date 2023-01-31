@@ -1,0 +1,74 @@
+.testimonials {
+  padding: 0 30px;
+  margin-bottom: 110px;
+
+  @include onTablet {
+    margin-bottom: 40px;
+  }
+
+  @include onTablet {
+    margin-bottom: 170px;
+  }
+
+  &__quote-image {
+    width: 100%;
+    height: 171px;
+    background-image: url(/images/quote.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+
+    @include onTablet {
+      margin-bottom: 40px;
+    }
+
+    @include onDesktop {
+      height: 192px;
+    }
+  }
+
+  &__main-text {
+    @extend %interBig;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: $main-text-color;
+    padding-top: 60px;
+
+    @include onTablet {
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    @include onDesktop {
+      width: 786px;
+      margin: 0 auto;
+    }
+  }
+
+  &__person-image {
+    margin: 0 auto 10px;
+    @include onTablet {
+      width: 62px;
+      height: 62px;
+    }
+  }
+
+  &__person-name {
+    @extend %interBig;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: $main-text-color;
+    margin-bottom: 5px;
+  }
+
+  &__person-role {
+    @extend %interSmall;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: $role-person-color;
+    padding-top: 5px;
+  }
+}

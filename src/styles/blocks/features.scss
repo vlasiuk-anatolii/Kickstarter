@@ -1,0 +1,195 @@
+.features {
+  background-color: $features-section-fon-color;
+  padding: 0 30px;
+
+  @include onTablet {
+    background-color: $bg-page;
+    padding: 0 0 0 30px;
+  }
+
+  &__container {
+    @include onTablet {
+      position: relative;
+    }
+  }
+
+  &__content-box {
+    display: flex;
+    flex-direction: column;
+
+    @include onTablet {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+    }
+
+    @include onDesktop {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(7, 1fr);
+    }
+  }
+
+  &__title {
+    padding-top: 45px;
+    @extend %interBig;
+    font-size: 30px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: $main-text-color;
+    margin-bottom: 39px;
+
+    @include onTablet {
+      font-size: 36px;
+      line-height: 46px;
+      grid-column: 2 / 4;
+    }
+
+    @include onDesktop {
+      font-size: 56px;
+      line-height: 70px;
+      grid-column: 2 / 5;
+      text-align: right;
+    }
+  }
+
+  &__subtitle-list-box-1 {
+    @include onTablet {
+      grid-column: 5 / 9;
+      grid-row: 2 / 4;
+    }
+
+    @include onDesktop {
+      grid-column: 6 / 13;
+      grid-row: 2 / 4;
+    }
+  }
+
+  &__subtitle-list-box-2 {
+    @include onTablet {
+      grid-column: 1 / 5;
+      grid-row: 4 / 6;
+    }
+
+    @include onDesktop {
+      margin-left: 50px;
+      grid-column: 2 / 5;
+    }
+  }
+
+  &__subtitle-list-box-3 {
+    @include onTablet {
+      grid-column: 4 / 7;
+      grid-row: 6 / 8;
+    }
+
+    @include onDesktop {
+      grid-column: 4 / 7;
+      grid-row: 6 / 8;
+    }
+  }
+
+  &__subtitle {
+    padding-top: 45px;
+    @extend %interBig;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: $features-subtitle-text-color;
+    margin-bottom: 21px;
+
+    @include onTablet {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    @include onDesktop {
+      font-size: 34px;
+      line-height: 42px;
+    }
+  }
+
+  &__list {
+    list-style: disc;
+    margin-bottom: 61px;
+
+    @include onTablet {
+      margin: 0;
+    }
+  }
+
+  &__list-item {
+    @extend %interSmall;
+    padding-left: 5px;
+    font-size: 14px;
+    line-height: 21px;
+    color: $main-text-color;
+    margin: 0 0 10px 13px;
+
+    @include onTablet {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__control-panel {
+    @include onTablet {
+      display: none;
+    }
+  }
+
+  &__arrows-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+
+  &__counter {
+    @extend %interSmall;
+    font-size: 11px;
+    line-height: 13px;
+    color: $features-noactive-counter-color;
+    text-align: center;
+  }
+
+  &__arrow-prev,
+  &__arrow-next {
+    cursor: pointer;
+  }
+
+  &__var {
+    position: relative;
+    @extend %interSmall;
+    font-size: 16px;
+    line-height: 24px;
+    color: $main-text-color;
+    top: -5px;
+  }
+
+  &__speacker-image {
+    width: 100%;
+    order: 1;
+
+    @include onTablet {
+      grid-column: 2 / 9;
+      grid-row: 3 / 7;
+      order: 0;
+    }
+
+    @include onDesktop {
+      grid-column: 5 / 12;
+      grid-row: 3 / 7;
+      align-self: end;
+    }
+  }
+
+  &__fon-desktop-img-speaker {
+    display: none;
+    @include onDesktop {
+      display: block;
+      grid-column: 3 / 13;
+      grid-row: 3 / 7;
+      order: 0;
+      background-color: $features-section-fon-color;
+    }
+  }
+}

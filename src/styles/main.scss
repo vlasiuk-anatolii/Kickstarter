@@ -1,0 +1,120 @@
+@import "utils";
+@import "typography";
+@import "blocks.scss";
+
+.burger {
+  position: relative;
+  margin-top: 5px;
+  z-index: 10;
+}
+
+path {
+  transition: transform $transition-duration;
+}
+
+.active {
+  height: 24px;
+}
+
+.active path:nth-of-type(1) {
+  transform: rotate(45deg);
+  transform-origin: 0 4px;
+}
+
+.active path:nth-of-type(2) {
+  display: none;
+}
+
+.active path:nth-of-type(3) {
+  transform: rotate(-45deg);
+  transform-origin: 5px 14px;
+}
+
+.benefit,
+.fitcha {
+  animation-name: appear;
+  animation-duration: 4 * $transition-duration;
+}
+
+.arrow-up {
+  position: sticky;
+  float: right;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  @include onDesktop {
+    margin-right: 30px;
+  }
+  opacity: 0.1;
+  animation-name: appeararrow;
+  animation-duration: $transition-duration;
+  transition: $transition-duration;
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+@keyframes appear {
+  0% {
+    -webkit-transform: translateY(-500px);
+    transform: translateY(-500px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: translateY(-65px);
+    transform: translateY(-65px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: translateY(-28px);
+    transform: translateY(-28px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  90% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes appeararrow {
+  0% {
+    -webkit-transform: scaleY(0.4);
+    transform: scaleY(0.4);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}

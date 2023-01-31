@@ -1,0 +1,55 @@
+.video {
+  &__box {
+    position: relative;
+    margin-bottom: 110px;
+
+    @include onTablet {
+      margin-bottom: 138px;
+    }
+  }
+
+  &__video {
+    position: relative;
+    height: 246px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    @include onTablet {
+      height: 400px;
+    }
+
+    @include onDesktop {
+      height: 590px;
+    }
+  }
+
+  &__circle-button {
+    position: absolute;
+    top: calc(50% - 54px);
+    left: calc(50% - 54px);
+    width: 108px;
+    height: 108px;
+    border: 1px solid $video-button-border-color;
+    border-radius: 50%;
+    transition: $transition-duration;
+  }
+
+  &__center-button {
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/play-button.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px;
+    transition: $transition-duration;
+
+    &:hover {
+      background-image: url(/images/triangle-button.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 10px;
+      cursor: pointer;
+    }
+  }
+}

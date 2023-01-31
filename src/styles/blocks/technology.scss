@@ -1,0 +1,57 @@
+.technology {
+  padding: 0 0 0 30px;
+
+  &__content-box {
+    overflow: hidden;
+  }
+
+  &__subtitle {
+    @extend %interBig;
+    font-size: 30px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: $main-text-color;
+    margin-bottom: 56px;
+
+    @include onTablet {
+      margin: 0 auto;
+      width: 520px;
+      font-size: 36px;
+      line-height: 48px;
+      margin-bottom: 71px;
+    }
+
+    @include onDesktop {
+      font-size: 56px;
+      line-height: 70px;
+    }
+  }
+
+  &__image {
+    position: relative;
+    width: 100%;
+    margin-bottom: 110px;
+    transform: matrix(0.99, -0.14, 0.14, 0.99, 0, 0);
+    left: 40px;
+    @include onTablet {
+      left: 60px;
+    }
+  }
+
+  &__shadow-image-box {
+    position: relative;
+  }
+
+  &__shadow-image {
+    position: absolute;
+    top: -260px;
+    left: 100px;
+    width: 100%;
+    transform: matrix(0.99, -0.14, 0.14, 0.99, 0, 0);
+
+    @include onTablet {
+      top: -450px;
+      left: 100px;
+    }
+  }
+}

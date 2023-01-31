@@ -1,0 +1,93 @@
+.benefits {
+  padding: 0 30px;
+  @include onDesktop {
+    padding: 0 123px;
+    margin-bottom: 150px;
+  }
+
+  &__container {
+    display: flex;
+    cursor: pointer;
+
+    @include onTablet {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 20px;
+      cursor: default;
+    }
+
+    @include onDesktop {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+  }
+
+  &__content-box-1 {
+    @include onTablet {
+      grid-column: 1 / 4;
+    }
+    @include onDesktop {
+      grid-column: 1 / 2;
+    }
+  }
+
+  &__content-box-2 {
+    @include onTablet {
+      grid-column: 4 / 7;
+    }
+    @include onDesktop {
+      grid-column: 2 / 3;
+    }
+  }
+
+  &__content-box-3 {
+    @include onTablet {
+      grid-column: 1 / 4;
+    }
+    @include onDesktop {
+      grid-column: 3 / 4;
+    }
+  }
+
+  &__content-box-4 {
+    @include onTablet {
+      grid-column: 4 / 7;
+    }
+    @include onDesktop {
+      grid-column: 4 / 5;
+    }
+  }
+
+  &__benefit-image {
+    width: 50px;
+    height: 40px;
+    margin: 0 auto 40px;
+  }
+
+  &__subtitle {
+    @extend %interBig;
+    font-size: 22px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: $main-text-color;
+    text-align: center;
+    margin-bottom: 20px;
+    @include onDesktop {
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__main-text {
+    @extend %interSmall;
+    font-size: 14px;
+    line-height: 21px;
+    color: $main-text-color;
+    margin-bottom: 110px;
+    text-align: center;
+    @include onDesktop {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.menu {
+  background-color: $bg-page;
+  height: 100%;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 30px;
+  }
+
+  &__list {
+    @include onDesktop {
+      display: flex;
+      padding-top: 100px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 10px;
+    padding: 0 30px;
+    @include onDesktop {
+      padding: 0;
+      margin: 0 50px 0 0;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+
+    @extend %interBig;
+    font-size: 16px;
+    line-height: 20px;
+    color: $main-text-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: border-color $transition-duration;
+    @include onDesktop {
+      font-family: "Helvetica", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      color: $main-text-color;
+    }
+
+    &:hover {
+      border-color: $main-text-color;
+    }
+  }
+}

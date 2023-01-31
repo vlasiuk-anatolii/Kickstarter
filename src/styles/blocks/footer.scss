@@ -1,0 +1,75 @@
+.footer {
+  padding: 0 30px;
+
+  &__logo-box {
+    display: none;
+    @include onTablet {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 64px;
+    }
+  }
+
+  &__social-box {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 33px;
+    @include onTablet {
+      justify-content: center;
+      margin-bottom: 63px;
+    }
+  }
+
+  &__face,
+  &__twit,
+  &__insta {
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: $transition-duration;
+    @include onTablet {
+      margin: 24px;
+    }
+  }
+
+  &__face {
+    background-image: url(/images/facebook.svg);
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.5);
+      background-image: url(/images/facebook-hover.svg);
+    }
+  }
+
+  &__twit {
+    background-image: url(/images/twitter.svg);
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.5);
+      background-image: url(/images/twitter-hover.svg);
+    }
+  }
+
+  &__insta {
+    background-image: url(/images/instagram.svg);
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.5);
+      background-image: url(/images/instagram-hover.svg);
+    }
+  }
+
+  &__copyrights-box {
+    margin-bottom: 20px;
+  }
+
+  &__copyrights-text {
+    @extend %interSmall;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: $features-noactive-counter-color;
+  }
+}
