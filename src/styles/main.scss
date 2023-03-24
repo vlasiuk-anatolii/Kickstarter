@@ -14,20 +14,19 @@ path {
 
 .active {
   height: 24px;
-}
+  & .burger-line1 {
+    transform: rotate(45deg);
+    transform-origin: 0 4px;
+  }
 
-.active path:nth-of-type(1) {
-  transform: rotate(45deg);
-  transform-origin: 0 4px;
-}
+  & .burger-line2 {
+    display: none;
+  }
 
-.active path:nth-of-type(2) {
-  display: none;
-}
-
-.active path:nth-of-type(3) {
-  transform: rotate(-45deg);
-  transform-origin: 5px 14px;
+  & .burger-line3 {
+    transform: rotate(-45deg);
+    transform-origin: 5px 14px;
+  }
 }
 
 .benefit,

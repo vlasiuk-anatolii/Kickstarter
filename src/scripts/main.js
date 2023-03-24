@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { sliderForItems } from './slideritems.js';
 
 const svgElement = document.querySelector('.burger');
@@ -83,9 +84,6 @@ ua.addEventListener('click', () => {
   en.classList.toggle('header__lg--active');
 });
 
-const imgDetails = document.querySelector('.technology__image');
-const imgMain = document.querySelector('.header__speakers-image');
-
 const menuList = { ...document.querySelector('.menu__list') };
 
 const header = document.querySelector('.header');
@@ -101,20 +99,15 @@ window.addEventListener('resize', () => {
     for (let i = 0; i < benefits.length; i++) {
       benefits[i].style.display = 'block';
     }
-    imgDetails.setAttribute('src', 'details-speacker-tablet.png');
   } else {
-    imgDetails.setAttribute('src', 'details-speacker.png');
     sliderForItems('benefit');
   }
   sliderForItems('fitcha');
-
-  if (window.visualViewport.width >= 1280) {
-    imgMain.setAttribute('src', 'speaker-desktop.png');
-    boxForMenu.style.display = 'flex';
-    imgDetails.setAttribute('src', 'details-speacker-desktop.png');
-  } else {
-    imgMain.setAttribute('src', 'product.jpg');
-    imgDetails.setAttribute('src', 'details-speacker-tablet.png');
-    boxForMenu.style.display = 'none';
-  }
 }, false);
+
+const submitButton = document.querySelector('.questions__submit-button');
+
+submitButton.addEventListener('click', () => {
+  document.querySelector('.questions__form').reset();
+  alert('Data has been successfully sent!');
+});
